@@ -35,7 +35,7 @@
 let db=null, dirty=false, current='inicio', selectedStudent=null, selectedTeacher=null, selectedCourse=null;
 const names={inicio:'Resumen',perfil:'Perfil de egreso',cursos:'Planes y cursos',estandares:'Estándares',bitacora:'Bitácora',actas:'Actas',presupuesto:'Presupuesto',planes_accion:'Planes de acción',practicas:'Prácticas',academica:'Productividad académica',autoevaluacion:'Autoevaluación',estudiantes:'Estudiantes',titulados:'Titulados',profesores:'Profesores',vcm:'VCM',eif:'Resultados EIF',hito:'Resultados HITO',end:'Resultados END',analisis:'Análisis consolidado',horarios:'Planificador de horarios',config:'Validación y exportación'};
 const gmMenuGroups=[{id:'carrera',title:'Carrera',children:['perfil','cursos','estandares']},{id:'gestor',title:'Gestor',children:['bitacora','actas','presupuesto','planes_accion','practicas','academica','autoevaluacion']},{id:'comunidad',title:'Comunidad',children:['estudiantes','titulados','profesores','vcm']},{id:'resultados',title:'Resultados',children:['eif','hito','end','analisis']}];
-const gmExternalLinks={horarios:'https://javiergzriffo.github.io/Castellano_Horarios/',actas:'https://javiergzriffo.github.io/Castellano_Actas/'};
+const gmExternalLinks={horarios:'https://javiergzriffo.github.io/Castellano_Horarios/',actas:'https://javiergzriffo.github.io/Castellano_Actas/',autoevaluacion:'https://javiergzriffo.github.io/Asistente_Autoevaluaci-n/'};
 function gmOpenExternal(k){const url=gmExternalLinks[k];if(!url)return false;const w=window.open(url,'_blank','noopener,noreferrer');if(!w)alert('El navegador bloqueó la nueva pestaña. Permite ventanas emergentes para abrir '+url);return true;}
 let gmOpenMenu='';
 const gmMenuGroupFor=k=>gmMenuGroups.find(g=>g.children.includes(k))?.id||'';
